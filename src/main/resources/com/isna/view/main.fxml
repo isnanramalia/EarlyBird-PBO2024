@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.control.TreeItem?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<SplitPane dividerPositions="0.25, 0.75" orientation="HORIZONTAL" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.isna.controller.MainController">
+    <items>
+        <VBox>
+            <ToolBar>
+                <Button text="New Note" onAction="#handleNewNote"/>
+                <Button text="New Folder" onAction="#handleNewFolder"/>
+                <Button text="Logout" onAction="#handleLogout"/>
+            </ToolBar>
+            <TreeView fx:id="treeView">
+                <root>
+                    <TreeItem value="Notes" expanded="true"/>
+                </root>
+            </TreeView>
+        </VBox>
+        <VBox>
+            <Label text="Note Details" style="-fx-font-weight: bold; -fx-padding: 10;"/>
+            <HTMLEditor fx:id="htmlEditor" VBox.vgrow="ALWAYS" minHeight="400" prefHeight="600"/>
+            <Button fx:id="saveNoteButton" text="Save Note" onAction="#handleSaveNote"/>
+        </VBox>
+    </items>
+</SplitPane>

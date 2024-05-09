@@ -1,0 +1,43 @@
+ plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+
+    // JavaFX
+    implementation 'org.openjfx:javafx-controls:22.0.1'
+    implementation 'org.openjfx:javafx-fxml:22.0.1'
+
+    // Firebase SDK
+    implementation 'com.google.firebase:firebase-admin:7.3.0'
+    implementation 'com.google.api:api-common:1.10.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.3'
+
+    // Enkrip
+    implementation 'org.mindrot:jbcrypt:0.4'
+
+}
+
+javafx {
+    version = "22.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web' ]
+}
+
+mainClassName = 'com.isna.Main'
+
+test {
+    useJUnitPlatform()
+}
