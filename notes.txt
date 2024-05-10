@@ -1,2 +1,0 @@
-ini:<html dir="ltr"><head></head><body contenteditable="true"><p><span style="font-family: &quot;&quot;;">wioi</span></p></body></html>
-sya:<html dir="ltr"><head></head><body contenteditable="true"><p><span style="font-family: &quot;&quot;;">oi</span></p><p><span style="font-family: &quot;&quot;;">halo</span></p></body></html>
