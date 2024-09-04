@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import com.isna.service.UserManager;
-
 import java.io.IOException;
 import java.util.regex.Pattern;
 
@@ -74,6 +73,7 @@ public class AuthenticationController {
         );
     }
 
+    // Mengalihkan ke tampilan utama aplikasi
     private void transitionToMainApp(String userId) throws IOException { // Menambahkan parameter userId
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/isna/view/main.fxml"));
         Stage stage = (Stage) statusLabel.getScene().getWindow();
@@ -89,17 +89,17 @@ public class AuthenticationController {
         changeScene("/com/isna/view/login.fxml");
     }
 
-@FXML
+    @FXML
     protected void onShowRegisterView() throws IOException {
         changeScene("/com/isna/view/register.fxml");
     }
 
     private void changeScene(String fxmlPath) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-        Stage stage = (Stage) emailField.getScene().getWindow();
-        Scene scene = new Scene(loader.load());
-        stage.setScene(scene);
-        stage.show();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath)); // Memuat file FXML
+        Stage stage = (Stage) emailField.getScene().getWindow(); // Mendapatkan stage saat ini
+        Scene scene = new Scene(loader.load()); // Membuat scene baru dari file FXML
+        stage.setScene(scene); // Mengatur scene baru
+        stage.show(); // Menampilkan scene
     }
 
     private boolean isValidEmail(String email) {
