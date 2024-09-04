@@ -10,12 +10,12 @@ Aplikasi ini adalah aplikasi pencatatan untuk menyimpan dan mengelola catatan pr
 - **Penyimpanan Online**: Catatan disimpan di layanan backend seperti Firebase, Supabase, atau backend yang di-hosting.
 - **Privasi Pengguna**: Setiap pengguna hanya bisa melihat catatan miliknya sendiri.
 
-## Teknologi
+## Tech
 
 - **Frontend**: JavaFX (FXML)
 - **Backend**: Java, Firebase
 
-## Pengaturan
+## Unduh
 
 Berikut langkah untuk menjalankan aplikasi Java di IntelliJ IDEA:
 
