@@ -6,7 +6,7 @@ public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String email;
-    private String password; // Passwords should be hashed in production applications
+    private String password;
     private String fullName;
     private String phoneNumber;
 
